@@ -3,6 +3,7 @@ const request = require('request-promise-native')
 
 const api = {
   handleBuy: (req, res) => {
+    console.log(`Adding product at ${config.get('cartServiceConnectionString')}/api/product`)
     _getUser(req.cookies.token)
       .then(user => request({
         method: 'post',

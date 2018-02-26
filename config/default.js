@@ -1,6 +1,6 @@
 const config = {
   port: 3000,
-  staticFilesConnectionString: 'http://user-mf.us-east-1.elasticbeanstalk.com',
+  staticFilesConnectionString: 'http://skipper.us-east-1.elasticbeanstalk.com',
   apiConnectionString: 'http://skipper.us-east-1.elasticbeanstalk.com/highlights',
   accessControlHeader: 'http://skipper.us-east-1.elasticbeanstalk.com',
   cartServiceConnectionString: 'http://skipper.us-east-1.elasticbeanstalk.com/cart',

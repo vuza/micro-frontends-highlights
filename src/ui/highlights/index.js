@@ -4,6 +4,7 @@ export default class App extends React.Component {
   constructor (props) {
     super(props)
 
+    this.loggedIn = !!props.token
     this.fetchUrl = `${props.apiConnectionString}/api/buy`
     this.staticUrl = props.staticFilesConnectionString
     this.handleBuy = this.handleBuy.bind(this)
@@ -32,26 +33,30 @@ export default class App extends React.Component {
 
   render () {
     const productImages = {
-      'product-1': this.staticUrl + '/highlights/things-031.jpg'
+      'product-1': this.staticUrl + '/highlights/things-031.jpg',
+      'product-2': this.staticUrl + '/highlights/9212174_orig.jpg',
+      'product-3': this.staticUrl + '/highlights/useless-object-design-the-unusable-katerina-kamprani-2.jpg'
     }
+
+    const buttonText = this.loggedIn ? 'In den Warenkorb legen' : 'Zum Shoppen anmelden'
 
     return <div>
       <figure className="product">
-        <img src={productImages['product-1']} alt="Pillowhat" />
-        <figcaption>A fancy, pancy Pillowhat, all you ever wanted</figcaption>
-        <button data-product="product-1" onClick={this.handleBuy} >In den Warenkorb legen</button>
+        <img src={productImages['product-1']} alt="Pillow Hat" />
+        <figcaption>A fancy, pancy Pillow Hat, all you ever wanted</figcaption>
+        <button data-product="product-1" onClick={this.handleBuy} disabled={!this.loggedIn}>{buttonText}</button>
+      </figure>
+
+      <figure className="product">
+        <img src={productImages['product-2']} alt="Pillowhat" />
+        <figcaption>I WANT COOKIES</figcaption>
+        <button data-product="product-2" onClick={this.handleBuy} disabled={!this.loggedIn} >{buttonText}</button>
       </figure>
 
       <figure className="product">
         <img src={productImages['product-1']} alt="Pillowhat" />
-        <figcaption>A fancy, pancy Pillowhat, all you ever wanted</figcaption>
-        <button data-product="product-1" onClick={this.handleBuy} >In den Warenkorb legen</button>
-      </figure>
-
-      <figure className="product">
-        <img src={productImages['product-1']} alt="Pillowhat" />
-        <figcaption>A fancy, pancy Pillowhat, all you ever wanted</figcaption>
-        <button data-product="product-1" onClick={this.handleBuy} >In den Warenkorb legen</button>
+        <figcaption>Free your toes</figcaption>
+        <button data-product="product-1" onClick={this.handleBuy} disabled={!this.loggedIn} >{buttonText}</button>
       </figure>
 
       <style jsx>{`
@@ -69,6 +74,18 @@ export default class App extends React.Component {
 
           img {
             width: 100%
+          }
+
+          button {
+            cursor: pointer;
+            border: 1px solid black;
+            text-transform: uppercase;
+            background: #ff6961;
+            width: 100%;
+          }
+
+          button {
+            background:white;
           }
       `}</style>
     </div>

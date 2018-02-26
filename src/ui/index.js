@@ -17,7 +17,7 @@ const s3 = new AWS.S3()
 
 const ui = {
   serveUi: (req, res) => {
-    const data = {apiConnectionString: config.get('apiConnectionString'), staticFilesConnectionString: config.get('staticFilesConnectionString')}
+    const data = {apiConnectionString: config.get('apiConnectionString'), staticFilesConnectionString: config.get('staticFilesConnectionString'), token: req.cookies.token}
 
     const html = renderToString(
       <App {...data} />

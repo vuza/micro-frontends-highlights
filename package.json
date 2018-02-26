@@ -24,6 +24,7 @@
     "ncp": "^2.0.0",
     "nodemon-webpack-plugin": "^0.1.6",
     "react": "^16.2.0",
+    "react-cookie": "^1.0.5",
     "react-dom": "^16.2.0",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",

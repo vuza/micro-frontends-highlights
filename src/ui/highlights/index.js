@@ -84,7 +84,7 @@ export default class App extends React.Component {
             width: 100%;
           }
 
-          button {
+          button:hover {
             background:white;
           }
       `}</style>

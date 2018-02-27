@@ -87,6 +87,11 @@ export default class App extends React.Component {
           button:hover {
             background:white;
           }
+
+          button:disabled {
+            background: grey!important;
+            color: white;
+          }
       `}</style>
     </div>
   }

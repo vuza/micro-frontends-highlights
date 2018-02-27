@@ -43,7 +43,7 @@ export default class App extends React.Component {
     return <div>
       <figure className="product">
         <img src={productImages['product-1']} alt="Pillow Hat" />
-        <figcaption>A fancy, pancy Pillow Hat, all you ever wanted</figcaption>
+        <figcaption>A Pillow Hat :O</figcaption>
         <button data-product="product-1" onClick={this.handleBuy} disabled={!this.loggedIn}>{buttonText}</button>
       </figure>
 
@@ -54,9 +54,9 @@ export default class App extends React.Component {
       </figure>
 
       <figure className="product">
-        <img src={productImages['product-1']} alt="Pillowhat" />
+        <img src={productImages['product-3']} alt="Pillowhat" />
         <figcaption>Free your toes</figcaption>
-        <button data-product="product-1" onClick={this.handleBuy} disabled={!this.loggedIn} >{buttonText}</button>
+        <button data-product="product-3" onClick={this.handleBuy} disabled={!this.loggedIn} >{buttonText}</button>
       </figure>
 
       <style jsx>{`

@@ -1,8 +1,8 @@
-# Micro frontends: User
+# Micro frontends: Highlights
 
 This repository is part of a proof of concept, implementing micro frontends, see https://github.com/vuza/micro-frontends for "What the hell are micro frontends".
 
-This repository contains the UI and business logic of the POC's user related views and tasks. It can serve a login and User overview UI and provides paths for login and -out. It set's application wide authorization cookies called `token` which can be used to retrieve user information.
+This Micro Frontend show three products, which can be added to a shopping cart. The shopping cart URL can be defined at `./config/`. The applications entry point is `./index.js`. The backend routes for buying a product are defined there and implemented at `./src/api/index.js`. The Micro Frontend is a React.js application, which can be found at `./src/ui/highlights/` and gets rendered at `./src/ui/index.js`.
 
 ## Usage
 
